@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pixel Art Editor</title>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.4/lib/p5.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <div class="card canvas-wrap">
+      <div id="p5-holder"></div>
+    </div>
+
+    <div class="card">
+      <div class="row tools">
+        <button id="penBtn" class="active">ペン</button>
+        <button id="eraserBtn">消しゴム</button>
+        <div class="actions" style="margin-left:auto; display:flex; gap:8px;">
+          <button id="undoBtn">元に戻す</button>
+          <button id="clearBtn" title="全消し">全消し</button>
+        </div>
+      </div>
+      <div class="row" style="margin-top:8px;">
+        <div class="palette" id="palette"></div>
+      </div>
+    </div>
+
+    <div class="hint">クリック/ドラッグで塗りつぶし。右クリックでスポイト。Shift を押しながらで直線モード（同一行/列）。 ⌘/Ctrl+Zで動作を1回取消し。</div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

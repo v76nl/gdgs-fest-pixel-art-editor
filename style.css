@@ -1,0 +1,67 @@
+/* style.css */
+:root {
+  --gap: 10px;
+  --radius: 12px;
+  --border: 1px solid #ddd;
+}
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  margin: 0;
+  padding: 16px;
+  background: #fafafa;
+}
+.app {
+  max-width: 420px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+.card {
+  background: #fff;
+  border: var(--border);
+  border-radius: var(--radius);
+  padding: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+.palette {
+  display: grid;
+  grid-template-columns: repeat(8, 28px);
+  gap: 8px;
+}
+.color {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,.2);
+  cursor: pointer;
+  box-shadow: inset 0 0 0 2px rgba(255,255,255,.5);
+}
+.color.selected {
+  outline: 2px solid #333;
+}
+.tools button, .actions button {
+  border: var(--border);
+  border-radius: 10px;
+  padding: 6px 10px;
+  background: #fff;
+  cursor: pointer;
+}
+.tools button.active {
+  background: #222;
+  color: #fff;
+}
+.canvas-wrap {
+  display: grid;
+  place-items: center;
+}
+.hint {
+  color: #666;
+  font-size: 12px;
+}
