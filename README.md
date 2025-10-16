@@ -7,7 +7,7 @@
 
 ## 🧩 About
 The new TypeScript + Canvas version is developed separately at:
-**[pixel-editor-ts](https://github.com/yourname/pixel-editor-ts)**
+**[pixel-editor-ts](https://github.com/v76nl/gdgs-fest-pixel-art-editor-ts)**
 
 
 # How to use
