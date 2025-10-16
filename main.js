@@ -5,10 +5,15 @@ const maxCanvasSize = 360; // キャンバスの最大表示サイズ（px）
 
 
 // --- カラーパレット定義 ---
-const PALETTE = [
-'#000000','#4f4f4f','#8f8f8f','#cfcfcf','#ffffff', // グレースケール
-'#ff3b30','#ff9500','#ffcc00','#34c759','#00c7be', // 赤〜緑系
-'#007aff','#5856d6','#af52de','#ff2d55' // 青〜紫系
+const PALETTE = [ // 64色
+    "#000000", "#e03c28", "#ffffff", "#d7d7d7", "#a8a8a8", "#7b7b7b", "#343434", "#151515", 
+    "#0d2030", "#415d66", "#71a6a1", "#bdffca", "#25e2cd", "#0a98ac", "#005280", "#00604b", 
+    "#20b562", "#58d332", "#139d08", "#004e00", "#172808", "#376d03", "#6ab417", "#8cd612", 
+    "#beeb71", "#eeffa9", "#b6c121", "#939717", "#cc8f15", "#ffbb31", "#ffe737", "#f68f37", 
+    "#ad4e1a", "#231712", "#5c3c0d", "#ae6c37", "#c59782", "#e2d7b5", "#4f1507", "#823c3d", 
+    "#da655e", "#e18289", "#f5b784", "#ffe9c5", "#ff82ce", "#cf3c71", "#871646", "#a328b3", 
+    "#cc69e4", "#d59cfc", "#fec9ed", "#e2c9ff", "#a675fe", "#6a31ca", "#5a1991", "#211640", 
+    "#3d34a5", "#6264dc", "#9ba0ef", "#98dcff", "#5ba8ff", "#0a89ff", "#024aca", "#00177d"
 ];
 
 
@@ -23,7 +28,7 @@ const history = []; // Undo用の履歴スタック
 const isDrawGrid = false;
 
 // --- canvas出力設定 ---
-let outputMode = '2d'; // 出力形式 ('1d' | '2d' | 'object')
+let outputMode = 'object'; // 出力形式 ('1d' | '2d' | 'object')
 
 // 履歴スタックに現在の状態を保存
 function pushHistory(snapshot) {
